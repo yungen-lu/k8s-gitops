@@ -15,6 +15,14 @@ spec:
         name: bitnami-helmchart
         namespace: flux-system
   values:
+    controller:
+      image:
+        repository: metallb/controller
+        tag: v0.9.6
+    speaker:
+      image:
+        repository: metallb/speaker
+        tag: v0.9.6
     configInline:
       address-pools:
       - name: default
