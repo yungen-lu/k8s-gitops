@@ -60,7 +60,7 @@ spec:
         memory: 1024Mi
   storage:
     useAllNodes: false
-    useAllDevices: false
+    useAllDevices: true
     config:
       metadataDevice:
       databaseSizeMB: "1024"
@@ -68,11 +68,11 @@ spec:
       osdsPerDevice: "1"
     nodes:
     - name: "kube-1"
-      devices:
-      - name: "vda2"
+      # devices:
+      # - name: "vda2"
     - name: "kube-2"
-      devices:
-      - name: "vda2"
+      # devices:
+      # - name: "vda2"
     - name: "kube-3"
-      devices:
-      - name: "vda2"
+      # devices:
+      # - name: "vda2"
