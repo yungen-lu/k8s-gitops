@@ -38,8 +38,7 @@ spec:
     - name: pg_autoscaler
       enabled: true
   dashboard:
-    enabled: true
-    port: 7000
+    enabled: false
     ssl: false
   disruptionManagement:
     managePodBudgets: false
