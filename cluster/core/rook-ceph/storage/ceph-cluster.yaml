@@ -9,6 +9,12 @@ spec:
     image: ceph/ceph:v16.2.4
     allowUnsupported: false
   dataDirHostPath: /var/lib/rook
+  placement:
+    all:
+      tolerations:
+      - key: node-role.kubernetes.io/master
+        operator: Equal
+        effect: NoSchedule
   skipUpgradeChecks: false
   continueUpgradeAfterChecksEvenIfNotHealthy: false
   removeOSDsIfOutAndSafeToRemove: false
