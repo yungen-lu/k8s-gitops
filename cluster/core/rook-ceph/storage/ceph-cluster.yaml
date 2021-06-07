@@ -65,6 +65,7 @@ spec:
     config:
       metadataDevice:
       databaseSizeMB: "1024"
+      journalSizeMB: "1024"
       osdsPerDevice: "1"
     nodes:
     - name: "kube-1"
