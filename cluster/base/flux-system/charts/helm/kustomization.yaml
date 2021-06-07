@@ -4,3 +4,4 @@ resources:
 - ingress-nginx-helmchart.yaml
 - bitnami-helmchart.yaml
 - jetstack-helmchart.yaml
+- rook-ceph-helmchart.yaml
