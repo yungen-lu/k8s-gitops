@@ -4,6 +4,7 @@ resources:
 - rbac.yaml
 - helm-release.yaml
 - storage
+- rook-ceph-tools
 # - rook-direct-mount
 # - service-monitors
 # - snapshot-controller
