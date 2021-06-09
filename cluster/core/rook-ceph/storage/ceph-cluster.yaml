@@ -22,6 +22,15 @@ spec:
   mon:
     count: 3
     allowMultiplePerNode: false
+  mgr:
+    count: 1
+    modules:
+    - name: pg_autoscaler
+      enabled: true
+  dashboard:
+    enabled: true
+    port: 7000
+    ssl: false
   monitoring:
     enabled: false
     rulesNamespace: rook-ceph
@@ -34,18 +43,30 @@ spec:
       method: quick
       dataSource: zero
       iteration: 1
-  mgr:
-    modules:
-    - name: pg_autoscaler
-      enabled: true
-  dashboard:
-    enabled: true
-    ssl: false
+    allowUninstallWithVolumes: false
   disruptionManagement:
-    managePodBudgets: false
+    managePodBudgets: true
     osdMaintenanceTimeout: 30
     manageMachineDisruptionBudgets: false
     machineDisruptionBudgetNamespace: openshift-machine-api
+  healthCheck:
+    daemonHealth:
+      mon:
+        disabled: false
+        interval: 45s
+      osd:
+        disabled: false
+        interval: 60s
+      status:
+        disabled: false
+        interval: 60s
+    livenessProbe:
+      mon:
+        disabled: false
+      mgr:
+        disabled: false
+      osd:
+        disabled: false
   resources:
     mon:
       requests:
@@ -61,9 +82,13 @@ spec:
         memory: 1024Mi
   storage:
     useAllNodes: true
-    useAllDevices: true
+    useAllDevices: false
     config:
       metadataDevice:
       databaseSizeMB: "1024"
       journalSizeMB: "1024"
       osdsPerDevice: "1"
+    nodes:
+    - name: "kube-1"
+    - name: "kube-2"
+    - name: "kube-3"
