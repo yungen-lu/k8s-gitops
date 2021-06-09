@@ -82,13 +82,9 @@ spec:
         memory: 1024Mi
   storage:
     useAllNodes: true
-    useAllDevices: false
+    useAllDevices: true
     config:
       metadataDevice:
       databaseSizeMB: "1024"
       journalSizeMB: "1024"
       osdsPerDevice: "1"
-    nodes:
-    - name: "kube-1"
-    - name: "kube-2"
-    - name: "kube-3"
