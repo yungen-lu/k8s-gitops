@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
 - rbac.yaml
 - helm-release.yaml
-# - storage
+- storage
 - rook-ceph-tools
 # - rook-direct-mount
 # - service-monitors
