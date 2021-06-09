@@ -5,3 +5,4 @@ resources:
 - bitnami-helmchart.yaml
 - jetstack-helmchart.yaml
 - rook-ceph-helmchart.yaml
+- metallb-helmchart.yaml
