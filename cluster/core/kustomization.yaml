@@ -3,6 +3,6 @@ kind: Kustomization
 resources:
 - namespaces
 - metallb-system
-# - ingress-nginx
+- ingress-nginx
 # - cert-manager
 # - rook-ceph
