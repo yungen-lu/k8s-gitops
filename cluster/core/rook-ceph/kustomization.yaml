@@ -6,3 +6,4 @@ resources:
 - cluster.yaml
 - toolbox.yaml
 - ceph-block-pool.yaml
+- storage-class.yaml
