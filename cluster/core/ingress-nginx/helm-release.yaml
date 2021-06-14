@@ -17,8 +17,8 @@ spec:
   values:
     controller:
       service:
-        type: LoadBalancer
-        loadBalancerIP: 23.234.250.214
+        type: NodePort
+        # loadBalancerIP: 23.234.250.214
         externalTrafficPolicy: Local
       autoscaling:
         enabled: false
