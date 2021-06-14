@@ -22,5 +22,6 @@ spec:
         externalTrafficPolicy: Local
       autoscaling:
         enabled: false
+      kind: DaemonSet
     defaultBackend:
       enabled: false
