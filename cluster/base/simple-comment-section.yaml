@@ -1,0 +1,14 @@
+kind: GitRepository
+metadata:
+  name: simple-comment-section-source
+spec:
+  url: https://github.com/yungen-lu/simple-comment-section
+---
+kind: Kustomization
+metadata:
+  name: simple-comment-section
+spec:
+  sourceRef:
+    kind: GitRepository
+    name: simple-comment-section-source
+  path: ./kustomize
