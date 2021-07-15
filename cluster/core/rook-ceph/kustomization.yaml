@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
 - common.yaml
 - operator.yaml
-- cluster.yaml
-- toolbox.yaml
-- ceph-block-pool.yaml
-- storage-class.yaml
+# - cluster.yaml
+# - toolbox.yaml
+# - ceph-block-pool.yaml
+# - storage-class.yaml
