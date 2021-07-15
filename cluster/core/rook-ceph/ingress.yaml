@@ -19,4 +19,4 @@ spec:
           service:
             name: rook-ceph-mgr-dashboard
             port:
-              name: http-dashboard
+              number: 7000
