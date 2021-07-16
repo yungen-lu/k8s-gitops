@@ -26,26 +26,3 @@ spec:
     provider: sops
     secretRef:
       name: sops-gpg
-
----
-apiVersion: image.toolkit.fluxcd.io/v1beta1
-kind: ImageRepository
-metadata:
-  name: simple-comment-section-registry
-  namespace: flux-system
-spec:
-  image: yungen/simple-comment-section
-  interval: 5m0s
-
----
-apiVersion: image.toolkit.fluxcd.io/v1beta1
-kind: ImagePolicy
-metadata:
-  name: simple-comment-section-policy
-  namespace: flux-system
-spec:
-  imageRepositoryRef:
-    name: simple-comment-section-registry
-  policy:
-    semver:
-      range: >=1.0.0
