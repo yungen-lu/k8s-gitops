@@ -5,3 +5,4 @@ resources:
 # - metallb-system.yaml
 # - cert-manager.yaml
 - rook-ceph.yaml
+- app.yaml
